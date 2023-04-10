@@ -14,4 +14,10 @@ public class LoginController {
         System.out.println("string into : " + stringInto);
         return "You have been write : " + stringInto;
     }
+    
+    @GetMapping(value = "/test1")
+    public String testCallApi(@RequestParam String stringInto) {
+        System.out.println("string into : " + stringInto);
+        return "You have been hihi write : " + stringInto;
+    }
 }
