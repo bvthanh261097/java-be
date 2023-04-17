@@ -14,7 +14,7 @@
 	<name>demo-build-spring</name>
 	<description>Demo build and deploy project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
