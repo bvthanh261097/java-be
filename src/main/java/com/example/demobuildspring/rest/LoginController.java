@@ -15,9 +15,9 @@ public class LoginController {
         return "You have been write : " + stringInto;
     }
     
-    @GetMapping(value = "/test1")
-    public String testCallApi(@RequestParam String stringInto) {
-        System.out.println("string into : " + stringInto);
-        return "You have been hihi write : " + stringInto;
+    @GetMapping(value = "/test1/hihi")
+    public String testCallApi1(@RequestParam String stringInto) {
+        System.out.println("string into : " + stringInto + "HIHI");
+        return "You have been hihi write : " + stringInto + "hihi";
     }
 }
