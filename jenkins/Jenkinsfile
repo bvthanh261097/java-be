@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -Dserver.port=8500 -DskipTests clean package'
             }
         }
         stage('Test') {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh "chmod -R 777 ./jenkins/deliver.sh"
+                sh "chmod -R 777 /home/it_admin/java-new/deliver.sh"
                 sh '/home/it_admin/java-new/deliver.sh'
             }
         }
