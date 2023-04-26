@@ -39,6 +39,10 @@ echo '-------- start copy file to backup--------'
 echo '------start copy jar to folder java application -----'
 sudo cp target/${NAME}-${VERSION}.jar /home/it_admin/java-new/
 echo '---------copy file successfully--------------'
+echo '-----------kill port befor start---------------'
+sudo kill -9 `sudo lsof -t -i:9000`
+echo '-----------start java------------'
 sudo java -jar -Dserver.port=9000 /home/it_admin/java-new/${NAME}-${VERSION}.jar
+echo '------------------BUILD SUCCESS--------------'
 #set -x
 #java -jar target/${NAME}-${VERSION}.jar
