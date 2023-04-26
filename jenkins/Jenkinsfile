@@ -23,8 +23,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh "chmod -R 777 /home/it_admin/java-new/deliver.sh"
-                sh '/home/it_admin/java-new/deliver.sh'
+                sh "chmod -R 777 ./jenkins/deliver.sh"
+                sh './jenkins/deliver.sh'
             }
         }
     }
